@@ -26,3 +26,12 @@ newsBodyEl.textContent = news.body;
 
 const newsDateEl = document.querySelector("#newsDate");
 newsDateEl.textContent = news.date;
+
+const bgSrc = {
+  src: "https://cdn.mos.cms.futurecdn.net/yS8AdDkWFHzDhEjycLwkc9-970-80.jpg.webp",
+  alt: "bg",
+};
+const bgImgEl = document.querySelector(".bg");
+bgImgEl.src = bgSrc.src;
+bgImgEl.alt = bgSrc.alt;
+bgImgEl.style.width = "100%";

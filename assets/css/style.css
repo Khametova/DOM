@@ -1,3 +1,42 @@
 :root {
+  font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
+  --color--: rgb(104, 121, 121);
+}
+
+body {
+  position: relative;
+}
+
+.newsName {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.bg {
+  width: 300px;
+  height: 120px;
+  object-fit: cover;
+  position: fixed;
+  filter: blur(3px);
+
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.newsTitle {
+  text-align: center;
+}
+
+.newsCategory {
+  margin-top: 10%;
+  color: var(--color--);
+}
+
+.newsDate {
+  color: var(--color--);
+  margin-left: auto;
 }

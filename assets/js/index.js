@@ -6,15 +6,6 @@ const news = {
   date: "2025-02-01",
 };
 
-/*const article = document.querySelector("#newsName");
-article.innerHTML = `
-   <h1>${news.title}</h1>
-   <h2>${news.category}</h2>
-   <p>${news.body}</p>
-   <span>${news.date}</span> 
-`;
-*/
-
 const newsTitleEl = document.querySelector(".newsTitle");
 newsTitleEl.textContent = news.title;
 

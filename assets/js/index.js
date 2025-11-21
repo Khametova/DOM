@@ -18,14 +18,34 @@ newsCardEl.append(newsImg);
 
 const newsNameEl = document.createElement("h1");
 newsNameEl.classList.add("newsName");
-newsNameEl.textContent = `${news.category}`;
+newsNameEl.textContent = `${news.title}`;
 newsCardEl.append(newsNameEl);
 
 const newsCategoryEl = document.createElement("h2");
 newsCategoryEl.classList.add("category");
-newsCategoryEl;
+newsCategoryEl.textContent = `${news.category}`;
 newsCardEl.append(newsCategoryEl);
 
 const newsBodyEl = document.createElement("p");
 newsBodyEl.classList.add("newsBody");
+newsBodyEl.textContent = `${news.body}`;
 newsCardEl.append(newsBodyEl);
+
+const newsWrpEl = document.createElement("div");
+newsWrpEl.classList.add("wrapper");
+newsCardEl.append(newsWrpEl);
+
+const newsDateEl = document.createElement("span");
+newsDateEl.textContent = `${news.date}`;
+newsWrpEl.append(newsDateEl);
+
+const trashIconEl = document.createElement("i");
+trashIconEl.classList.add("fa-solid");
+trashIconEl.classList.add("fa-trash");
+trashIconEl.classList.add("trashIcon");
+newsWrpEl.append(trashIconEl);
+
+function deleteNews() {
+  newsCardEl.remove();
+}
+trashIconEl.onclick = deleteNews;

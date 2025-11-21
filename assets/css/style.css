@@ -40,3 +40,10 @@ body {
   color: var(--color--);
   margin-left: auto;
 }
+
+#btn {
+  margin-right: auto;
+  border: none;
+  background-color: inherit;
+  color: var(--color--);
+}

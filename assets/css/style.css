@@ -36,13 +36,17 @@ body {
   color: var(--color--);
 }
 
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
 .newsDate {
   color: var(--color--);
-  margin-left: auto;
 }
 
 #btn {
-  margin-right: auto;
   border: none;
   background-color: inherit;
   color: var(--color--);

@@ -6,17 +6,9 @@ const news = {
   date: "2025-02-01",
 };
 
-const newsTitleEl = document.querySelector(".newsTitle");
-newsTitleEl.textContent = news.title;
-
-const newsCategoryEl = document.querySelector(".newsCategory");
-newsCategoryEl.textContent = news.category;
-
-const newsBodyEl = document.querySelector(".newsBody");
-newsBodyEl.textContent = news.body;
-
-const newsDateEl = document.querySelector(".newsDate");
-newsDateEl.textContent = news.date;
+const newsNameEl = document.createElement("article");
+newsNameEl.classList.add("newsName");
+document.body.append(newsNameEl);
 
 const bgSrc = {
   src: "https://cdn.mos.cms.futurecdn.net/yS8AdDkWFHzDhEjycLwkc9-970-80.jpg.webp",
@@ -26,3 +18,31 @@ const bgImgEl = document.querySelector(".bg");
 bgImgEl.src = bgSrc.src;
 bgImgEl.alt = bgSrc.alt;
 bgImgEl.style.width = "100%";
+
+const newsTitleEl = document.querySelector(".newsTitle");
+newsTitleEl.textContent = news.title;
+
+const newsCategoryEl = document.querySelector(".newsCategory");
+newsCategoryEl.textContent = news.category;
+
+const newsBodyEl = document.querySelector(".newsBody");
+newsBodyEl.textContent = news.body;
+
+const divWrapEl = document.createElement("div");
+divWrapEl.querySelector(".wrap");
+divWrapEl.textContent = news.div;
+
+const newsDateEl = document.querySelector(".newsDate");
+newsDateEl.textContent = news.date;
+
+const trashIcon = document.createElement("i");
+trashIcon.classList.add("fa-solid");
+trashIcon.classList.add("fa-trash");
+trashIcon.classList.add("trashIcon");
+
+function deleteNews(e) {
+  newsNameEl.remove();
+}
+trashIcon.onclick = deleteNews;
+
+newsNameEl.append(trashIcon);

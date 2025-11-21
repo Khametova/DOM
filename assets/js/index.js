@@ -15,16 +15,16 @@ article.innerHTML = `
 `;
 */
 
-const newsTitleEl = document.querySelector("#newsTitle");
+const newsTitleEl = document.querySelector(".newsTitle");
 newsTitleEl.textContent = news.title;
 
-const newsCategoryEl = document.querySelector("#newsCategory");
+const newsCategoryEl = document.querySelector(".newsCategory");
 newsCategoryEl.textContent = news.category;
 
-const newsBodyEl = document.querySelector("#newsBody");
+const newsBodyEl = document.querySelector(".newsBody");
 newsBodyEl.textContent = news.body;
 
-const newsDateEl = document.querySelector("#newsDate");
+const newsDateEl = document.querySelector(".newsDate");
 newsDateEl.textContent = news.date;
 
 const bgSrc = {

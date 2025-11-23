@@ -10,16 +10,24 @@ const newsCardEl = document.createElement("article");
 newsCardEl.classList.add("newsCard");
 document.body.append(newsCardEl);
 
+const newsHeaderEl = document.createElement("header");
+newsHeaderEl.classList.add("haeder");
+newsCardEl.append(newsHeaderEl);
+
 const newsImg = document.createElement("img");
 newsImg.src = news.headerBgSrc;
 newsImg.alt = `${news.category}`;
 newsImg.classList.add("imgCard");
-newsCardEl.append(newsImg);
+newsHeaderEl.append(newsImg);
+
+const newsContainerEl = document.createElement("div");
+newsContainerEl.classList.add("container");
+newsHeaderEl.append(newsContainerEl);
 
 const newsNameEl = document.createElement("h1");
 newsNameEl.classList.add("newsName");
 newsNameEl.textContent = `${news.title}`;
-newsCardEl.append(newsNameEl);
+newsContainerEl.append(newsNameEl);
 
 const newsCategoryEl = document.createElement("h2");
 newsCategoryEl.classList.add("category");

@@ -11,7 +11,7 @@ newsCardEl.classList.add("newsCard");
 document.body.append(newsCardEl);
 
 const newsHeaderEl = document.createElement("header");
-newsHeaderEl.classList.add("haeder");
+newsHeaderEl.classList.add("header");
 newsCardEl.append(newsHeaderEl);
 
 const newsImg = document.createElement("img");
